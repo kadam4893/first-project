@@ -10,7 +10,7 @@
   - firewalld:
       port: 20-21/tcp
       permanent: yes
-      state: enabled
+      state: present
       
   - name: start service
     service:
