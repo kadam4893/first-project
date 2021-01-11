@@ -8,7 +8,7 @@
       state: latest
       
   - firewalld:
-      port: 20-21/tcp
+      service: ftp
       immediate: yes
       permanent: true
       state: enabled
