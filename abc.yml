@@ -8,7 +8,7 @@
       state: latest
       
   - firewalld:
-      service: https
+      service: ftp
       permanent: yes
       state: enabled
       
