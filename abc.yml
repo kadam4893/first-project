@@ -4,7 +4,7 @@
   tasks:
   - name: install package
     yum:
-      name: vsftpd, docker 
+      name:  docker 
       state: latest
       
   - firewalld:
@@ -15,7 +15,7 @@
       
   - name: start service
     service:
-      name: vsftpd, docker
+      name:  docker
       enabled: yes
     notify:
       - start apache
@@ -23,6 +23,6 @@
   handlers:
     - name: start apache
       service:
-        name: vsftpd, docker
+        name: docker
         state: started
         
