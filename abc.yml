@@ -12,11 +12,13 @@
       enabled: yes
     notify:
       - start apache
+      
   - name: add port in firewall
     firewalld:
       service: ftp
       permanent: yes
       state: enabled 
+      
   handlers:
     - name: start apache
       service:
