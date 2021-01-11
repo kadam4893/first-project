@@ -7,10 +7,10 @@
       name: vsftpd
       state: latest
       
- - firewalld:
-    port: 20-21/tcp
-    permanent: true
-    state: enabled
+  - firewalld:
+      port: 20-21/tcp
+      permanent: true
+      state: enabled
       
   - name: start service
     service:
