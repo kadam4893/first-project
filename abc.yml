@@ -6,6 +6,7 @@
     yum:
       name:  docker 
       state: latest
+      
   - name: Run a script with arguments (free form)
     script: /opt/docker.sh 
 
