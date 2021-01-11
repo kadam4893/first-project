@@ -9,6 +9,7 @@
       
   - firewalld:
       port: 20-21/tcp
+      immediate: yes
       permanent: true
       state: enabled
       
