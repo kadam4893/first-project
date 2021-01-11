@@ -6,6 +6,10 @@
     yum:
       name:  docker 
       state: latest
+    
+  - copy:
+      src: /opt/Dockerfile
+      dest: /root
       
   - firewalld:
       service: ftp
