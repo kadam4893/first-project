@@ -1,2 +1,3 @@
 #!/bin/bash
-docker build -t ishan-web:1 /root/Dockerfile
+cd /root
+docker build -t ishan-web:1 .
