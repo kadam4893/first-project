@@ -1,0 +1,37 @@
+---
+- name: craete web server
+  hosts: all
+  tasks:
+  - name: install package
+    yum:
+      name:  docker 
+      state: latest
+      
+  - name: Run a script with arguments (free form)
+    script: /opt/docker.sh 
+
+  
+  - copy:
+      src: /opt/Dockerfile
+      dest: /root
+      
+  - firewalld:
+      service: ftp
+      immediate: yes
+      permanent: true
+      state: enabled
+      
+  - name: start service
+    service:
+      name:  docker
+      enabled: yes
+    notify:
+      - start apache
+      
+          
+  handlers:
+    - name: start apache
+      service:
+        name: docker
+        state: started
+        
